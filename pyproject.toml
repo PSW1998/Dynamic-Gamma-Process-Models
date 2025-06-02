@@ -1,1 +1,22 @@
+# pyproject.toml (save at repo root)
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]      # tools needed to build
+build-backend = "setuptools.build_meta"     # tell pip to call setuptools
+
+[project]                                   # ---- PEP 621 metadata ----
+name = "dynagamma"
+version = "0.1.0"
+description = "Dynamic Gamma-Process models for realised volatility"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Patrick Woitschig", email = "patrick@example.com" }]
+dependencies = [
+  "numpy>=1.23"
+]
+
+[tool.setuptools]                           # backend-specific extras
+package-dir = {"" = "src"}                  # src/ layout
+packages = ["dynagamma"]                    # the importable package
 
